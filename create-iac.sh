@@ -9,17 +9,26 @@ groupadd GRP_SEC
 
 echo "Creating users..."
 
-useradd carlos -m -s /bin/bash -G GRP_ADM -p $(openssl passwd -crypt Senha123) -e
-useradd maria -m -s /bin/bash -G GRP_ADM -p $(openssl passwd -crypt Senha123) -e
-useradd joao -m -s /bin/bash -G GRP_ADM -p $(openssl passwd -crypt Senha123) -e
+useradd carlos -m -s /bin/bash -G GRP_ADM -p $(openssl passwd Senha123)
+passwd carlos -e
+useradd maria -m -s /bin/bash -G GRP_ADM -p $(openssl passwd Senha123)
+passwd maria -e
+useradd joao -m -s /bin/bash -G GRP_ADM -p $(openssl passwd Senha123)
+passwd joao -e
 
-useradd debora -m -s /bin/bash -G GRP_VEN -p $(openssl passwd -crypt Senha123) -e
-useradd sebastiana -m -s /bin/bash -G GRP_VEN -p $(openssl passwd -crypt Senha123) -e
-useradd roberto -m -s /bin/bash -G GRP_VEN -p $(openssl passwd -crypt Senha123) -e
+useradd debora -m -s /bin/bash -G GRP_VEN -p $(openssl passwd Senha123)
+passwd debora -e
+useradd sebastiana -m -s /bin/bash -G GRP_VEN -p $(openssl passwd Senha123)
+passwd sebastiana -e
+useradd roberto -m -s /bin/bash -G GRP_VEN -p $(openssl passwd Senha123)
+passwd roberto -e
 
-useradd josefina -m -s /bin/bash -G GRP_SEC -p $(openssl passwd -crypt Senha123) -e
-useradd amanda -m -s /bin/bash -G GRP_SEC -p $(openssl passwd -crypt Senha123) -e
-useradd rogrio -m -s /bin/bash -G GRP_SEC -p $(openssl passwd -crypt Senha123) -e
+useradd josefina -m -s /bin/bash -G GRP_SEC -p $(openssl passwd Senha123)
+passwd josefina -e
+useradd amanda -m -s /bin/bash -G GRP_SEC -p $(openssl passwd Senha123)
+passwd amanda -e
+useradd rogrido -m -s /bin/bash -G GRP_SEC -p $(openssl passwd Senha123)
+passwd rogrido-e
 
 
 echo "Creating directories ..."
