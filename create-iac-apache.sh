@@ -11,5 +11,5 @@ cd /tmp
 wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
 unzip main.zip
 rm main.zip
-cp -R /tmp/linux-site-dio/* /var/www/html/
-rm -rf /tmp/linux-site-dio/
+cp -R /tmp/linux-site-dio-main/* /var/www/html/
+rm -rf /tmp/linux-site-dio-main/
